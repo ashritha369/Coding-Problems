@@ -9,3 +9,13 @@ Examples (Input -> Output):
 */
 
 // SOLUTION
+const array = "Hello World".split("");
+const newArray = [];
+array.map((i) => i + i).join("");
+
+//FOR CODEWAR SOLUTION
+function doubleChar(str) {
+  // Your code here
+  const array = str.split("");
+  return array.map((i) => i + i).join("");
+}
