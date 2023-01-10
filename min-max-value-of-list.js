@@ -12,28 +12,36 @@ Notes
 You may consider that there will not be any empty arrays/vectors.
 */
 // SOLUTION
-
+//  READ THIS LINK, TO UNDERSTAND VARIOUS WAYS TO SORT AN ARRAY  TO FIND IT'S HIGHEST AND LOWEST VALUES
+//https://www.w3schools.com/js/js_array_sort.asp
+// while loop in js: The while loop loops through a block of code as long as a specified condition is true.
 //LOGIC PRACTICE -1
 
-/*
+const integerArray = [-1, 0, 3, 2];
 
-const integerArray = [-1, 0, 3, 2]
-const result = integerArray.filter(checkInteger);
-function checkInteger(eachInteger) {
-  for (i = 0; i < integerArray.length; i++) {
-
-////
-    while (eachInteger === integerArray[i + 1]){
-      // 
-      if (eachInteger < integerArray[i + 1]) {
-        console.log('eachInteger is lesser than compared value', eachInteger, integerArray[i + 1])
-      } else {
-        console.log('eachInteger is greater than compared value', eachInteger, integerArray[i + 1])
-      }
-// above is if and else bracket ending
+function checkIntegerMax(integerArray) {
+  let length = integerArray.length;
+  let max = -Infinity;
+  while (length--) {
+    if (integerArray[length] > max) {
+      max = integerArray[length];
     }
-//above is While loop bracket ending
   }
+  return max;
+}
+function checkIntegerMin(integerArray) {
+  let length = integerArray.length;
+  let min = Infinity;
+  while (length--) {
+    if (integerArray[length] > min) {
+      min = integerArray[length];
+    }
+  }
+  return min;
 }
 
-*/
+checkIntegerMax();
+checkIntegerMin();
+
+// check this link
+// https://www.youtube.com/watch?v=tPCOYESqQiY
