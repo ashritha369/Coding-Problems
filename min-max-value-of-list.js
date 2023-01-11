@@ -45,3 +45,5 @@ checkIntegerMin();
 
 // check this link
 // https://www.youtube.com/watch?v=tPCOYESqQiY
+// https://stackoverflow.com/questions/47094289/while1-in-javascript
+//https://www.geeksforgeeks.org/difference-while1-while0-c-language/
