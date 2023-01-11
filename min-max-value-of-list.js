@@ -33,7 +33,7 @@ function checkIntegerMin(integerArray) {
   let length = integerArray.length;
   let min = Infinity;
   while (length--) {
-    if (integerArray[length] > min) {
+    if (integerArray[length] < min) {
       min = integerArray[length];
     }
   }
