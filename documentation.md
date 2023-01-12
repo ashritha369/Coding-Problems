@@ -8,5 +8,6 @@ Pushing codewars solution to github
 - replace()-->[https://www.w3schools.com/jsref/jsref_replace.asp](https://www.w3schools.com/jsref/jsref_replace.asp)
   -map()-->[https://www.w3schools.com/jsref/jsref_map.asp](https://www.w3schools.com/jsref/jsref_map.asp)
 - In a function, always remember to return the values.
+- toString() [https://www.w3schools.com/jsref/jsref_tostring_number.asp](https://www.w3schools.com/jsref/jsref_tostring_number.asp)
 
 ---
