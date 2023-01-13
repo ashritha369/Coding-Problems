@@ -10,18 +10,39 @@ For example (Input -> Output):
 8 -> 36 (1 + 2 + 3 + 4 + 5 + 6 + 7 + 8)
 
 */
-//SOLUTION
+//SOLUTION USING FOR LOOP
 var summation = function (num) {
   // Code here
   let array = [];
-  while (num != 0) {
-    array.push(num--);
+  let sum = 0;
+  for (i = 0; i + 1 <= num; i++) {
+    array.push(i + 1);
   }
-  // return array;
+  console.log(array);
+  //   return array;
 
-  while (array.length != 0) {
-    let sum = 0;
-    sum = sum + array[array.length - 1];
-    return sum;
+  for (i = 0; i < array.length; i++) {
+    sum = array[i] + sum;
   }
+  return sum;
 };
+
+//SOLUTION USING WHILE LOOP
+
+var summation = function (num) {
+  // Code here
+  let array = [];
+  let sum = 0;
+  while (num != 0) {
+    array.push(num);
+    num--;
+  }
+  console.log(array);
+  let i = 0;
+  while (i != array.length) {
+    sum = array[i] + sum;
+    i++;
+  }
+  return sum;
+};
+summation(8);
