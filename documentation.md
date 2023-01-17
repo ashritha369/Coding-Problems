@@ -9,5 +9,7 @@ Pushing codewars solution to github
   -map()-->[https://www.w3schools.com/jsref/jsref_map.asp](https://www.w3schools.com/jsref/jsref_map.asp)
 - In a function, always remember to return the values.
 - toString() [https://www.w3schools.com/jsref/jsref_tostring_number.asp](https://www.w3schools.com/jsref/jsref_tostring_number.asp)
+- slice() [https://www.w3schools.com/jsref/jsref_slice_array.asp](https://www.w3schools.com/jsref/jsref_slice_array.asp) --> Geeks for geeks [https://www.geeksforgeeks.org/javascript-array-slice-method/](https://www.geeksforgeeks.org/javascript-array-slice-method/)
+- shift() and pop() [https://www.geeksforgeeks.org/shift-vs-pop-method-in-javascript/](https://www.geeksforgeeks.org/shift-vs-pop-method-in-javascript/)
 
 ---
