@@ -11,5 +11,6 @@ Pushing codewars solution to github
 - toString() [https://www.w3schools.com/jsref/jsref_tostring_number.asp](https://www.w3schools.com/jsref/jsref_tostring_number.asp)
 - slice() [https://www.w3schools.com/jsref/jsref_slice_array.asp](https://www.w3schools.com/jsref/jsref_slice_array.asp) --> Geeks for geeks [https://www.geeksforgeeks.org/javascript-array-slice-method/](https://www.geeksforgeeks.org/javascript-array-slice-method/)
 - shift() and pop() [https://www.geeksforgeeks.org/shift-vs-pop-method-in-javascript/](https://www.geeksforgeeks.org/shift-vs-pop-method-in-javascript/)
+- Math.ceil(), Math.floor(), Math.round() -[https://stackabuse.com/rounding-numbers-in-javascript-using-ceil-floor-and-round/](https://stackabuse.com/rounding-numbers-in-javascript-using-ceil-floor-and-round/)
 
 ---
