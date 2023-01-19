@@ -24,3 +24,6 @@ Pushing codewars solution to github
 - forEach() : [https://www.w3schools.com/jsref/jsref_foreach.asp](https://www.w3schools.com/jsref/jsref_foreach.asp)
 
 ---
+
+- Can you put a return in a ternary operator JavaScript?
+  **You cannot assign a return statement to a variable.**
