@@ -27,3 +27,4 @@ Pushing codewars solution to github
 
 - Can you put a return in a ternary operator JavaScript?
   **You cannot assign a return statement to a variable.**
+  [https://stackoverflow.com/questions/19439219/ternary-operator-with-return-statements-javascript](https://stackoverflow.com/questions/19439219/ternary-operator-with-return-statements-javascript)
