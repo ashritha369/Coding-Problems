@@ -62,3 +62,148 @@ On the other hand, spreading in object literals enumerates the own properties of
 const array = [1, 2, 3];
 const obj = { ...array }; // { 0: 1, 1: 2, 2: 3 }
 ```
+
+# Modifying arrays
+
+1. [https://www.freecodecamp.org/news/manipulating-arrays-in-javascript/](https://www.freecodecamp.org/news/manipulating-arrays-in-javascript/)
+
+2. Array Methods - [https://www.w3schools.com/js/js_array_methods.asp](https://www.w3schools.com/js/js_array_methods.asp)
+
+- JavaScript Array **pop()** : The pop() method **removes the last element from an array**, The pop() method returns the value that was "popped out".
+
+- JavaScript Array **push()**: The push() method **adds a new element to an array (at the end)**, The push() method returns the new array length.
+
+- JavaScript Array **shift()**: The shift() method **removes the first array element** and "shifts" all other elements to a lower index. The shift() method returns the value that was "shifted out".
+
+- JavaScript Array **unshift()**: The unshift() method **adds a new element to an array**(at the beginning), and "unshifts" older elements, The unshift() method returns the new array length.
+
+- JavaScript Array length : The length property provides an easy way to append a new element to an array.
+
+```const fruits = ["Banana", "Orange", "Apple", "Mango"];
+  fruits[fruits.length] = "Kiwi";
+  console.log(fruits);
+  VM604:3 (5) ['Banana', 'Orange', 'Apple', 'Mango', 'Kiwi']
+```
+
+- JavaScript Array **delete()**
+
+```
+Warning !
+Array elements can be deleted using the JavaScript operator delete.
+
+Using delete leaves undefined holes in the array.
+
+Use pop() or shift() instead.
+```
+
+# Merging or Concatenating Arrays
+
+- **concate()** : The concat() method creates a new array by merging (concatenating) existing arrays. The _concat() method does not change the existing arrays. It always returns a new array_. The concat() method can also take strings as arguments.
+
+```
+const myGirls = ["Cecilie", "Lone"];
+const myBoys = ["Emil", "Tobias", "Linus"];
+
+const myChildren = myGirls.concat(myBoys);
+console.log(myChildren)
+
+OUTPUT:  ['Cecilie', 'Lone', 'Emil', 'Tobias', 'Linus']
+```
+
+# Splicing and Slicing Arrays
+
+- The splice() method adds new items to an array.
+
+- The slice() method slices out a piece of an array.
+
+---
+
+- **JavaScript Array splice()** : The splice() method can be used to add new items to an array.
+  --> The first parameter (2) defines the position where new elements should be added (spliced in).
+
+  --> The second parameter (0) defines how many elements should be removed.
+
+  --> The rest of the parameters ("Lemon" , "Kiwi") define the new elements to be added.
+
+  --> The splice() method returns an array with the deleted items
+
+```
+const fruits = ["Banana", "Orange", "Apple", "Mango"];
+const splicedFruits=fruits.splice(2, 0, "Lemon", "Kiwi");
+console.log(splicedFruits);
+console.log(fruits);
+OUTPUT: []
+OUTPUT: ['Banana', 'Orange', 'Lemon', 'Kiwi', 'Apple', 'Mango']
+```
+
+--> The first parameter (1) defines the position where new elements should be added (spliced in).
+
+--> The second parameter (3) defines how many elements should be removed.
+
+--> The rest of the parameters ("Lemon" , "Kiwi") define the new elements to be added.
+
+```
+const fruits = ["Banana", "Orange", "Apple", "Mango"];
+const splicedFruits=fruits.splice(1, 3, "Lemon", "Kiwi");
+console.log(splicedFruits);
+console.log(fruits);
+OUTPUT: ['Orange', 'Apple', 'Mango']
+OUTPUT: ['Banana', 'Lemon', 'Kiwi']
+```
+
+- **Using splice() to Remove Elements**
+
+```const fruits = ["Banana", "Orange", "Apple", "Mango"];
+fruits.splice(0, 1);
+```
+
+--> The first parameter (0) defines the position where new elements should be added (spliced in).
+
+--> The second parameter (1) defines how many elements should be removed.
+
+--> The rest of the parameters are omitted. No new elements will be added.\_\_
+
+---
+
+- **JavaScript Array slice()** : The slice() method slices out a piece of an array into a new array.
+
+This example slices out a part of an array starting from array element 1 ("Orange"):
+
+```
+const fruits = ["Banana", "Orange", "Lemon", "Apple", "Mango"];
+const citrus = fruits.slice(1);
+console.log(citrus);
+console.log(fruits);
+OUTPUT: ['Orange', 'Lemon', 'Apple', 'Mango']
+OUTPUT: ['Banana', 'Orange', 'Lemon', 'Apple', 'Mango']
+```
+
+--> The slice() method creates a new array.
+
+--> _The slice() method does not remove any elements from the source array_.
+
+--> The slice() method can take two arguments like slice(1, 3).
+
+--> The method then selects elements from the start argument, and up to (but not including) the end argument.
+
+```
+const fruits = ["Banana", "Orange", "Lemon", "Apple", "Mango"];
+const citrus = fruits.slice(1, 3);
+console.log(citrus);
+console.log(fruits);
+OUTPUT: ['Orange', 'Lemon']
+OUTPUT: ['Banana', 'Orange', 'Lemon', 'Apple', 'Mango']
+```
+
+--> If the end argument is omitted, like in the first examples, the slice() method slices out the rest of the array.
+
+```
+const fruits = ["Banana", "Orange", "Lemon", "Apple", "Mango"];
+const citrus = fruits.slice(2);
+console.log(citrus);
+console.log(fruits);
+OUTPUT:  ['Lemon', 'Apple', 'Mango']
+OUTPUT:  ['Banana', 'Orange', 'Lemon', 'Apple', 'Mango']
+```
+
+# Sorting Arrays
