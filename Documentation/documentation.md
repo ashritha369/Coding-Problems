@@ -465,3 +465,160 @@ cars.sort(function(a, b){return a.year - b.year});
 ```
 
 # Array Iteration
+
+## 1. JavaScript Array **forEach()**
+
+- The forEach() method calls a function (a callback function) once for each array element.
+
+```
+const numbers = [45, 4, 9, 16, 25];
+numbers.forEach(myFunction);
+
+function myFunction(value, index, array) {
+ console.log('The value, index, array are:', value, index, array)
+}
+
+OUTPUT:
+VM498:5 The value, index, array are: 45 0 (5) [45, 4, 9, 16, 25]
+VM498:5 The value, index, array are: 4 1 (5) [45, 4, 9, 16, 25]
+VM498:5 The value, index, array are: 9 2 (5) [45, 4, 9, 16, 25]
+VM498:5 The value, index, array are: 16 3 (5) [45, 4, 9, 16, 25]
+VM498:5 The value, index, array are: 25 4 (5) [45, 4, 9, 16, 25]
+```
+
+## 2. JavaScript Array **map()**
+
+- The map() method creates a new array by performing a function on each array element.
+
+- The map() method does not execute the function for array elements without values.
+
+- The map() method does not change the original array.
+
+const numbers1 = [45, 4, 9, 16, 25];
+const numbers2 = numbers1.map(myFunction);
+console.log('Final Output Array is',numbers2)
+
+```
+function myFunction(value, index, array) {
+ console.log('The value, index and array are:', value, index, array)
+ return value * 2;
+}
+OUTPUT:
+VM1309:7 The value, index and array are: 45 0 (5) [45, 4, 9, 16, 25]
+VM1309:7 The value, index and array are: 4 1 (5) [45, 4, 9, 16, 25]
+VM1309:7 The value, index and array are: 9 2 (5) [45, 4, 9, 16, 25]
+VM1309:7 The value, index and array are: 16 3 (5) [45, 4, 9, 16, 25]
+VM1309:7 The value, index and array are: 25 4 (5) [45, 4, 9, 16, 25]
+VM1309:3 Final Output Array is (5) [90, 8, 18, 32, 50]
+```
+
+- Note that the function takes 3 arguments:
+- The item value
+- The item index
+- The array itself
+- When a callback function uses only the value parameter, the index and array parameters can be omitted:
+
+## 3. JavaScript Array **filter()**
+
+- The filter() method creates a new array with array elements that pass a test.
+
+- This example creates a new array from elements with a value larger than 18:
+- Note that the function takes 3 arguments:
+
+The item value
+The item index
+The array itself
+In certain examples , the callback function does not use the index and array parameters, so they can be omitted.
+
+```const numbers = [45, 4, 9, 16, 25];
+const over18 = numbers.filter(myFunction);
+console.log('Final Filtered Array', over18)
+
+function myFunction(value, index, array) {
+    console.log('The value, index, array: ',value, index, array)
+  return value > 18;
+}
+OUTPUT:
+VM1913:6 The value, index, array:  45 0 (5) [45, 4, 9, 16, 25]
+VM1913:6 The value, index, array:  4 1 (5) [45, 4, 9, 16, 25]
+VM1913:6 The value, index, array:  9 2 (5) [45, 4, 9, 16, 25]
+VM1913:6 The value, index, array:  16 3 (5) [45, 4, 9, 16, 25]
+VM1913:6 The value, index, array:  25 4 (5) [45, 4, 9, 16, 25]
+VM1913:3 Final Filtered Array (2) [45, 25]
+```
+
+## 4. JavaScript Array **reduce()**
+
+- The reduce() method runs a function on each array element to produce (reduce it to) a single value.
+
+- The reduce() method works from left-to-right in the array. See also reduceRight().
+
+- The reduce() method does not reduce the original array.
+
+- This example finds the sum of all numbers in an array
+
+```const numbers = [45, 4, 9, 16, 25];
+let sum = numbers.reduce(myFunction);
+console.log('The sum is',sum)
+function myFunction(total, value, index, array) {
+    console.log('The total, value, index, array value are',total,value,index,array);
+  return total + value;
+}
+
+OUTPUT:
+VM2518:5 The total, value, index, array value are 45 4 1 (5) [45, 4, 9, 16, 25]
+VM2518:5 The total, value, index, array value are 49 9 2 (5) [45, 4, 9, 16, 25]
+VM2518:5 The total, value, index, array value are 58 16 3 (5) [45, 4, 9, 16, 25]
+VM2518:5 The total, value, index, array value are 74 25 4 (5) [45, 4, 9, 16, 25]
+VM2518:3 The sum is 99
+```
+
+Note that the function takes 4 arguments:
+
+The total (the initial value / previously returned value)
+The item value
+The item index
+The array itself
+The example above does not use the index and array parameters. It can be rewritten to:
+
+```
+const numbers = [45, 4, 9, 16, 25];
+let sum = numbers.reduce(myFunction);
+
+function myFunction(total, value) {
+  return total + value;
+}
+```
+
+- The reduce() method can accept an initial value:
+
+```const numbers = [45, 4, 9, 16, 25];
+let sum = numbers.reduce(myFunction, 100);
+
+function myFunction(total, value) {
+  return total + value;
+}
+
+```
+
+## 5. JavaScript Array **every()**
+
+## 6. JavaScript Array **some()**
+
+## 7. JavaScript Array **indexOf()**
+
+## 8. JavaScript Array **lastIndexOf()**
+
+## 9. JavaScript Array **find()**
+
+## 10. JavaScript Array **findIndex()**
+
+## 11. JavaScript **Array.from()**
+
+## 12. JavaScript Array **Keys()**
+
+## 13. JavaScript Array **entries()**
+
+## 14. JavaScript Array **includes()**
+
+## 15. JavaScript Array **Spread (...)**
