@@ -336,7 +336,8 @@ Note : Sorting a whole array is a very inefficient method if you only want to fi
 
 --> we can use Math.max.apply to find the highest number in an array:
 
-```function myArrayMax(arr) {
+```
+function myArrayMax(arr) {
   return Math.max.apply(null, arr);
 }
 myArrayMax([1,369,99,90])
@@ -603,15 +604,136 @@ function myFunction(total, value) {
 
 ## 5. JavaScript Array **every()**
 
+- The every() method checks if all array values pass a test.
+
+- This example checks if all array values are larger than 18:
+
+- The return value of applying this mthod on an array is boolean
+
+```
+const numbers = [45, 4, 9, 16, 25];
+let allOver18 = numbers.every(myFunction);
+
+function myFunction(value, index, array) {
+  return value > 18;
+}
+console.log(allOver18);
+OUTPUT: s false
+```
+
+- Note that the function takes 3 arguments:
+
+The item value
+The item index
+The array itself
+When a callback function uses the first parameter only (value), the other parameters can be omitted:
+
+```
+const numbers = [45, 4, 9, 16, 25];
+let allOver18 = numbers.every(myFunction);
+
+function myFunction(value) {
+  return value > 18;
+}
+
+```
+
 ## 6. JavaScript Array **some()**
+
+- The some() method checks if some array values pass a test.
+
+- This example checks if some array values are larger than 18:
+
+```
+const numbers = [45, 4, 9, 16, 25];
+let someOver18 = numbers.some(myFunction);
+
+function myFunction(value, index, array) {
+  return value > 18;
+}
+OUTPUT: true
+```
 
 ## 7. JavaScript Array **indexOf()**
 
+- The indexOf() method searches an array for an element value and returns its position.
+- Note: The first item has position 0, the second item has position 1, and so on.
+
+```
+const fruits = ["Apple", "Orange", "Guava", "Mango"];
+let position = fruits.indexOf("Guava");
+console.log(position)
+
+OUTPUT:  2
+```
+
+**Syntax** :
+
+- `array.indexOf(item, start)`
+  - item Required. The item to search for.
+  - start Optional. Where to start the search. Negative values will start at the given position counting from the end, and search to the end.
+  - Array.indexOf() returns -1 if the item is not found.
+
+If the item is present more than once, it returns the position of the first occurrence.
+
 ## 8. JavaScript Array **lastIndexOf()**
+
+- Array.lastIndexOf() is the same as Array.indexOf(), but returns the position of the last occurrence of the specified element.
+
+```
+const fruits = ["Apple", "Orange", "Apple", "Mango"];
+let position = fruits.lastIndexOf("Apple");
+console.log(position)
+OUTPUT: 2
+```
+
+**Syntax**
+
+- `array.lastIndexOf(item, start)`
+  - item Required. The item to search for
+  - start Optional. Where to start the search. Negative values will start at the given position counting - from the end, and search to the beginning
 
 ## 9. JavaScript Array **find()**
 
+- The find() method returns the value of the first array element that passes a test function.
+
+- This example finds (returns the value of) the first element that is larger than 18:
+
+```
+const numbers = [4, 9, 16, 25, 29];
+let first = numbers.find(myFunction);
+
+function myFunction(value, index, array) {
+  return value > 18;
+}
+console.log(first)
+OUTPUT:  25
+```
+
+- Note that the function takes 3 arguments:
+
+  - The item value
+  - The item index
+  - The array itself
+
+- find() is not supported in Internet Explorer.
+
 ## 10. JavaScript Array **findIndex()**
+
+- The findIndex() method returns the index of the first array element that passes a test function.
+
+- This example finds the index of the first element that is larger than 18:
+
+```
+const numbers = [4, 9, 16, 25, 29];
+let first = numbers.findIndex(myFunction);
+
+function myFunction(value, index, array) {
+  return value > 18;
+}
+console.log(first)
+OUTPUT: 3
+```
 
 ## 11. JavaScript **Array.from()**
 
