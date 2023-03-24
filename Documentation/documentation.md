@@ -744,3 +744,62 @@ OUTPUT: 3
 ## 14. JavaScript Array **includes()**
 
 ## 15. JavaScript Array **Spread (...)**
+
+---
+
+# Regular Expressions
+
+- Refer this website : [https://regexr.com/](https://regexr.com/)
+
+- [https://www.w3schools.com/jsref/jsref_obj_regexp.asp](https://www.w3schools.com/jsref/jsref_obj_regexp.asp)
+
+- [https://youtu.be/zeMPry3ak6Y](https://youtu.be/zeMPry3ak6Y) by Code With Harry
+
+- - Regular expressions in JavaScript (also known as regex or regexp) are a powerful tool for matching patterns in strings. Regular expressions are defined using a syntax that allows for the specification of patterns and rules to search, replace, and manipulate text.
+
+**1. Matching a pattern in a string:**
+
+```
+const text = "Hello, world!";
+const pattern = /world/;
+const result = text.match(pattern);
+console.log(result); // Output: ["world"]
+```
+
+In this example, we use the match() method to search for the word "world" in the string "Hello, world!". We define the regular expression pattern /world/ to match the text. The match() method returns an array containing the match if it is found, or null if it is not.
+
+**2. Matching multiple occurrences of a pattern in a string**
+
+```
+const text = "The quick brown fox jumps over the lazy dog.";
+const pattern = /the/gi;
+const result = text.match(pattern);
+console.log(result); // Output: ["The", "the", "the"]
+```
+
+In this example, we use the match() method to find all occurrences of the word "the" in the string "The quick brown fox jumps over the lazy dog." We define the regular expression pattern /the/gi to match all occurrences of the word "the" in a case-insensitive manner. The g flag stands for "global" and tells the regular expression engine to find all matches in the string, not just the first one.
+
+**3. Replacing a pattern in a string:**
+
+```
+const text = "The quick brown fox jumps over the lazy dog.";
+const pattern = /the/gi;
+const replacement = "a";
+const result = text.replace(pattern, replacement);
+console.log(result); // Output: "a quick brown fox jumps over a lazy dog."
+```
+
+In this example, we use the replace() method to replace all occurrences of the word "the" with the letter "a" in the string "The quick brown fox jumps over the lazy dog." We define the regular expression pattern /the/gi to match all occurrences of the word "the" in a case-insensitive manner. We pass the string "a" as the replacement argument to replace all matches with the letter "a".
+
+**4. Matching a pattern with special characters:**
+
+```
+const text = "The quick brown fox jumps over the lazy dog.";
+const pattern = /\b\w{5}\b/g;
+const result = text.match(pattern);
+console.log(result); // Output: ["quick", "brown"]
+```
+
+In this example, we use the match() method to find all words in the string "The quick brown fox jumps over the lazy dog." that are exactly five characters long. We define the regular expression pattern /\b\w{5}\b/g to match all words that are exactly five characters long. The \b character is a word boundary that matches the beginning or end of a word. The \w character class matches any word character (letters, digits, and underscores), and the {5} quantifier specifies that we want exactly five characters. The g flag again stands for "global" and tells the regular expression engine to find all matches in the string, not just the first one.
+
+These are just a few examples of how regular expressions can be used in JavaScript. There are many more features and techniques that can be used to match and manipulate text using regular expressions.

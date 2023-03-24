@@ -11,3 +11,13 @@ For example, the string "This website is for losers LOL!" would become "Ths wbst
 
 Note: for this kata y isn't considered a vowel.
 */
+// Refer:  https://youtu.be/zeMPry3ak6Y
+function disemvowel(str) {
+  const pattern = /[aeiouAEIOU]/g;
+  const replaceWith = "";
+  const result = str.replace(pattern, replaceWith);
+  return result;
+}
+disemvowel("This website is for losers LOL!");
+disemvowel("No offense but,\nYour writing is among the worst I've ever read");
+disemvowel("What are you, a communist?");
