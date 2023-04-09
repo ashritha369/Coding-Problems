@@ -321,3 +321,31 @@ const binArrayToNumber = (arr) => {
 console.log(binArrayToNumber([1, 0, 0])); // [4, 0, 0]
 In this implementation, the forEach() method is used to iterate over the arr array and push the result of each iteration to the newArray variable using the push() method. The myFunction callback function is not needed anymore, as the Math.pow(2, n) * item expression is directly used in the forEach() method.
 */
+
+// CORRECT ATTEMPT SOLUTION
+const binaryArrayToNumber = (arr) => {
+  let n = arr.length - 1;
+  let newArray = [];
+
+  for (i = 0, n = arr.length - 1; i < arr.length && n >= 0; i++, n--) {
+    newArray.push(arr[i] * Math.pow(2, n));
+  }
+
+  return newArray.reduce((total, value) => {
+    return total + value;
+  });
+};
+/*
+const Test = require('@codewars/test-compat');
+
+describe("One's and Zero's", () => {
+
+  it("Example tests", () => {
+      Test.assertEquals(binaryArrayToNumber([0,0,0,1]), 1);
+      Test.assertEquals(binaryArrayToNumber([0,0,1,0]), 2);
+      Test.assertEquals(binaryArrayToNumber([1,1,1,1]), 15);
+      Test.assertEquals(binaryArrayToNumber([0,1,1,0]), 6);
+  });
+
+});
+*/

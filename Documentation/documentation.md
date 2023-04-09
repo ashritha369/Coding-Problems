@@ -802,4 +802,18 @@ console.log(result); // Output: ["quick", "brown"]
 
 In this example, we use the match() method to find all words in the string "The quick brown fox jumps over the lazy dog." that are exactly five characters long. We define the regular expression pattern /\b\w{5}\b/g to match all words that are exactly five characters long. The \b character is a word boundary that matches the beginning or end of a word. The \w character class matches any word character (letters, digits, and underscores), and the {5} quantifier specifies that we want exactly five characters. The g flag again stands for "global" and tells the regular expression engine to find all matches in the string, not just the first one.
 
-These are just a few examples of how regular expressions can be used in JavaScript. There are many more features and techniques that can be used to match and manipulate text using regular expressions.
+## These are just a few examples of how regular expressions can be used in JavaScript. There are many more features and techniques that can be used to match and manipulate text using regular expressions.
+
+# Difference between map() and forEach()
+
+--> [https://www.geeksforgeeks.org/difference-between-foreach-and-map-loop-in-javascript/](https://www.geeksforgeeks.org/difference-between-foreach-and-map-loop-in-javascript/)
+
+-->**Differences between forEach() and map() methods:**
+
+1. The _forEach()_ method does not returns a new array based on the given array. _The map()_ method returns an entirely new array.
+
+2. The _forEach()_ method returns “undefined“. The _map()_ method returns the newly created array according to the provided callback function.
+
+3. The _forEach()_ method doesn’t return anything hence the method chaining technique cannot be applied here. With the _map()_ method, we can chain other methods like, reduce(),sort() etc.
+
+4. The _forEach()_ is not executed for empty elements. _map()_ does not change the original array.
