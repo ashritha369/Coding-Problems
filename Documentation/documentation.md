@@ -743,6 +743,17 @@ OUTPUT: 3
 
 ## 14. JavaScript Array **includes()**
 
+The includes() method returns true if a string contains a specified string.
+
+Otherwise it returns false.
+
+The includes() method is case sensitive.
+
+**Syntax**
+`string.includes(searchvalue, start)`
+
+Return Value: A boolean, true if the string contains the value, otherwise false.
+
 ## 15. JavaScript Array **Spread (...)**
 
 ---
