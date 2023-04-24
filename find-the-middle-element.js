@@ -39,3 +39,32 @@ function gimme(triplet) {
 }
 
 gimme([33, 1, 18]);
+
+// This code if failing when we encounter 0,
+/*
+The issue seems to be related to the fact that the sort() method sorts the elements of the array in place, which can lead to unexpected behavior when sorting arrays that contain non-numeric values such as undefined, null, or NaN.
+
+In this case, it looks like the input array contains a 0 value, which can cause issues when sorting the array using the a-b comparison function.
+*/
+
+//i.e is for
+
+//[ -33, 0, 38 ]
+
+//CORRECT CODE PASSING FOR ALL TEST CASES
+function gimme(triplet) {
+  let sorted = [...triplet].sort(function (a, b) {
+    return a - b;
+  });
+  let middleValue = sorted[1];
+
+  console.log("middle value", middleValue);
+  console.log("givenTriplets", triplet);
+
+  let index = triplet.indexOf(middleValue);
+  if (index === -1) {
+    // middleValue not found in triplet
+    return 0;
+  }
+  return index;
+}
