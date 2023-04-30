@@ -25,3 +25,11 @@ function grow(x) {
   return value;
 }
 grow([1, 2, 3, 4]);
+// SHORTEST SOLUTIONS
+
+//SHORTEDT SOLUTION 1:
+
+const grow = (x) => x.reduce((a, b) => a * b);
+
+//SHORTEST SOLUTION 2
+const grow = (nums) => nums.reduce((product, num) => product * num, 1);
