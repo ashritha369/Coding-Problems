@@ -35,3 +35,7 @@ function cockroachSpeed(s) {
   return result;
 }
 cockroachSpeed(1.08);
+
+//SHORTEST SOLUTIONS
+
+//SHORTEST SOLUTION 1
