@@ -26,3 +26,15 @@ function countBy(x, n) {
 
   return z;
 }
+
+//ANOTHER WAY SOLUTION -1
+function countBy(x, n) {
+  var z = [];
+  let y = x;
+  for(i=0; i<n; i++){
+    z[i] = x;
+    x += y;
+  }
+
+  return z;
+}

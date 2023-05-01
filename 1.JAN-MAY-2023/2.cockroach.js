@@ -39,3 +39,10 @@ cockroachSpeed(1.08);
 //SHORTEST SOLUTIONS
 
 //SHORTEST SOLUTION 1
+const cockroachSpeed = (s) => Math.floor(s / 0.036);
+
+//SHORTEST SOLUTION 2
+function cockroachSpeed(s) {
+  //multiply km/m by 27.7777777778
+  return Math.floor(s * 27.7777777778);
+}
