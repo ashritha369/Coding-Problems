@@ -90,7 +90,7 @@ String.prototype.toAlternatingCase = function () {
   return new_str;
 };
 
-//SHORTEDT SOLUTION 3
+//SHORTEST SOLUTION 3
 String.prototype.toAlternatingCase = function () {
   return this.replace(/[a-z]/gi, (e) =>
     /[a-z]/.test(e) ? e.toUpperCase() : e.toLowerCase()
