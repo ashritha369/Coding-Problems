@@ -13,5 +13,35 @@ A few examples:(Input1, Input2, Input3 --> Output)
 5, 2, "multiply" --> 10
 5, 2, "divide"   --> 2.5
 Try to do it without using if statements!
-
 */
+
+// MY SOLUTION
+function arithmetic(a, b, operator) {
+  //your code here!
+  switch (operator) {
+    case "add": {
+      return a + b;
+      break;
+    }
+    case "subtract": {
+      return a - b;
+      break;
+    }
+    case "divide": {
+      return a / b;
+      break;
+    }
+    case "multiply": {
+      return a * b;
+      break;
+    }
+    default: {
+      console.log("Type the proper operator");
+    }
+  }
+}
+// SHORTEST SOLUTION
+function arithmetic(a, b, operator) {
+  optable = { add: "+", subtract: "-", multiply: "*", divide: "/" };
+  return eval(a + optable[operator] + b);
+}

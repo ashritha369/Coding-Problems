@@ -828,3 +828,7 @@ In this example, we use the match() method to find all words in the string "The 
 3. The _forEach()_ method doesn’t return anything hence the method chaining technique cannot be applied here. With the _map()_ method, we can chain other methods like, reduce(),sort() etc.
 
 4. The _forEach()_ is not executed for empty elements. _map()_ does not change the original array.
+
+# JavaScript Switch Statement
+
+- [https://www.w3schools.com/js/js_switch.asp](https://www.w3schools.com/js/js_switch.asp)
