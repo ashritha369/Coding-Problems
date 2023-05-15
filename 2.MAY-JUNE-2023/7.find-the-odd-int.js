@@ -11,16 +11,24 @@ Examples
 [0,1,0,1,0] should return 0, because it occurs 3 times (which is odd).
 [1,2,2,3,3,3,4,3,3,3,2,2,1] should return 4, because it appears 1 time (which is odd).
 */
+
 function findOdd(A) {
-  //happy coding!
-  let count = 0;
-  let i, j;
-  for (i = 0; i < A.length; i++) {
-    for (j = 0; j < A.length; j++) {
-      if (A[i] === A[j]) {
+  let oddArray = [];
+  for (let i = 0; i < A.length; i++) {
+    let count = 0;
+    for (let j = 0; j < A.length; j++) {
+      if (A[j] === A[i]) {
+        console.log(A[i], A[j]);
         count++;
       }
     }
+    console.log(count);
+    if (count % 2 !== 0) {
+      oddArray.push(A[i]);
+      console.log(oddArray);
+    }
   }
-  return count % 2 !== 0 ? A[i] : null;
+  return oddArray.length > 0 ? oddArray[0] : null;
 }
+
+findOdd([5, 8, 5, 8, 5]);
