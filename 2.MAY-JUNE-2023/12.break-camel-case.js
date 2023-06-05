@@ -19,6 +19,7 @@ function solution(string) {
         break;
       }
     }
+    //below if , is for the condition where we dont find Capital Letter, at that case, we will assign the length of string(as it is the last index) and will assign to index.
     if (index === 0) {
       index = string.length;
     }
