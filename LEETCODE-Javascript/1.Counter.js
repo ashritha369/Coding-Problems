@@ -9,5 +9,5 @@ let createCounter = function(n) {
         
     };
 };
-counter=createCounter();
+counter=createCounter(10);
 counter();
