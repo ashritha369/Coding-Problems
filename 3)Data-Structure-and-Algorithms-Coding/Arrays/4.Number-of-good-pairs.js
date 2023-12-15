@@ -1,4 +1,3 @@
-
 //https://leetcode.com/problems/number-of-good-pairs/
 
 var numIdenticalPairs = function(nums) {
