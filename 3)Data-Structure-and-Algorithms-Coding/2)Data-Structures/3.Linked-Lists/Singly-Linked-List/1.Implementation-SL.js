@@ -18,6 +18,7 @@ class LinkedList {
       return this;
     }
     prepend(value) {
+
       const newNode = {
         value: value,
         next: null
@@ -39,8 +40,10 @@ class LinkedList {
     insert(index, value){
       //Check for proper parameters;
       if(index >= this.length) {
-        console.log('yes')
         return this.append(value);
+      }
+      if(index===0){
+        return this.prepend(value);
       }
       const newNode = {
         value: value,
