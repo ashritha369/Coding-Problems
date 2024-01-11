@@ -53,15 +53,6 @@ class MyArray {
     this.length--;
   }
 
-  map(callback) {
-    const newArray = new MyArray();
-    for (let i = 0; i < this.length; i++) {
-      newArray.push(callback(this.data[i], i, this.data));
-    }
-    console.log("Map:", newArray.data, "Length:", newArray.length);
-    return newArray;
-  }
-
   filter(callback) {
     const newArray = new MyArray();
     for (let i = 0; i < this.length; i++) {
