@@ -1,17 +1,18 @@
 class myArray {
   constructor() {
     this.length = 0;
-    this.data = {};
+    // Replaced {} with []
+    this.data = [];
   }
   push(item) {
     this.data[this.length] = item;
     this.length++;
     console.log(this.data);
   }
-  map(givenArray) {
+  map() {
     let returningArray = [];
-    for (let i = 0; i < givenArray.length; i++) {
-      returningArray[i] = givenArray[i] + 2;
+    for (let i = 0; i < this.data.length; i++) {
+      returningArray[i] = this.data[i] + 2;
     }
     console.log(returningArray);
     return returningArray;
@@ -23,4 +24,4 @@ newArray.push("hi");
 newArray.push("ashi");
 newArray.push("myLove");
 
-newArray.map(["hi", "ashi", "there"]);
+newArray.map();
